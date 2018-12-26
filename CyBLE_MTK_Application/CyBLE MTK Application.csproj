@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CECEAB8-8C5E-48A4-AD97-316D4B42B886}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CyBLE_MTK_Application</RootNamespace>
+    <AssemblyName>CyBLE MTK Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>4.0.6.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\CyBLE_MTK_Release_4.0.7\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Build Both Platforms|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Build Both Platforms\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Build Both Platforms|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Build Both Platforms\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Build Both Platforms|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Build Both Platforms\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B3D07EE2412A0830C8E027AB90A5FE4141CE591A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CyBLE MTK Application_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tree.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cypress_Link_SQL2005">
+      <HintPath>.\Cypress_Link_SQL2005.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneralLinkSql">
+      <HintPath>.\GeneralLinkSql.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneralLinkSqlLocal">
+      <HintPath>.\GeneralLinkSqlLocal.dll</HintPath>
+    </Reference>
+    <Reference Include="HexadecimalTextBox">
+      <HintPath>..\..\..\..\..\..\..\GitHub\CyBLE_MTK_Application_DEV\CyBLE_MTK_Application - fittec\HexadecimalTextBox\bin\Release\HexadecimalTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa.Interop, Version=5.8.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Users\cysp\Documents\my work\ISB Check Tool for 012002\bin\Release\Ivi.Visa.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PP_ComLib_Wrapper, Version=3.23.0.2131, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Cypress\Programmer\PP_ComLib_Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMTKDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMTKDialog.Designer.cs">
+      <DependentUpon>AboutMTKDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agilent.cs" />
+    <Compile Include="AuthDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthDialog.Designer.cs">
+      <DependentUpon>AuthDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordDialog.Designer.cs">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPortInfo.cs" />
+    <Compile Include="BatchAddMTKTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchAddMTKTests.Designer.cs">
+      <DependentUpon>BatchAddMTKTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentUnit.cs" />
+    <Compile Include="CyBLEMTKRobotServer.cs" />
+    <Compile Include="CyBLEMTKSerialPort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CyBLEMTKSettingsImpExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyBLEMTKSettingsImpExp.Designer.cs">
+      <DependentUpon>CyBLEMTKSettingsImpExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyBLEMTKSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyBLEMTKSplashScreen.Designer.cs">
+      <DependentUpon>CyBLEMTKSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysisForm.Designer.cs">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbError.cs" />
+    <Compile Include="DbTable.cs" />
+    <Compile Include="DmmSwitchSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DmmSwitchSettingsDialog.Designer.cs">
+      <DependentUpon>DmmSwitchSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DUTCurrentMeasureDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DUTCurrentMeasureDialog.Designer.cs">
+      <DependentUpon>DUTCurrentMeasureDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECCS.cs" />
+    <Compile Include="EnumPassConOverall.cs" />
+    <Compile Include="EquipmentScriptInterpreter.cs" />
+    <Compile Include="ManufacturingModeSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturingModeSettings.Designer.cs">
+      <DependentUpon>ManufacturingModeSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MFGTestSanityCheck.cs" />
+    <Compile Include="MTKInstruments.cs" />
+    <Compile Include="MTKTest.cs" />
+    <Compile Include="MTKTestDelay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MTKTestDUTCurrentMeasure.cs" />
+    <Compile Include="MTKTestErrCode.cs" />
+    <Compile Include="MTKTestProgramAllDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestProgramAllDialog.Designer.cs">
+      <DependentUpon>MTKTestProgramAllDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestRBA.cs" />
+    <Compile Include="MTKTestRSX.cs" />
+    <Compile Include="MTKPSoCProgrammerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKPSoCProgrammerDialog.Designer.cs">
+      <DependentUpon>MTKPSoCProgrammerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestAnritsu.cs" />
+    <Compile Include="MTKTestAnritsuDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestAnritsuDialog.Designer.cs">
+      <DependentUpon>MTKTestAnritsuDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestBDA.cs" />
+    <Compile Include="MTKTestBDADialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestBDADialog.Designer.cs">
+      <DependentUpon>MTKTestBDADialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestBDAProgrammer.cs" />
+    <Compile Include="MTKTestCUS.cs" />
+    <Compile Include="MTKTestCUSDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestCUSDialog.Designer.cs">
+      <DependentUpon>MTKTestCUSDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestDelayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestDelayDialog.Designer.cs">
+      <DependentUpon>MTKTestDelayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestI2C.cs" />
+    <Compile Include="MTKTestI2CDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestI2CDialog.Designer.cs">
+      <DependentUpon>MTKTestI2CDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestPERDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestPERDialog.Designer.cs">
+      <DependentUpon>MTKTestPERDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestProgramAll.cs" />
+    <Compile Include="MTKTestResult.cs" />
+    <Compile Include="MTKTestRSXDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestRSXDialog.Designer.cs">
+      <DependentUpon>MTKTestRSXDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestRxTxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestRxTxDialog.Designer.cs">
+      <DependentUpon>MTKTestRxTxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKPSoCProgrammer.cs">
+    </Compile>
+    <Compile Include="MTKTestRXP.cs">
+    </Compile>
+    <Compile Include="MTKTestSTC.cs" />
+    <Compile Include="MTKTestSTCDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestSTCDialog.Designer.cs">
+      <DependentUpon>MTKTestSTCDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestTXCWDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestTXCWDialog.Designer.cs">
+      <DependentUpon>MTKTestTXCWDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestTXP.cs">
+    </Compile>
+    <Compile Include="LogManager.cs" />
+    <Compile Include="MTKTestTXCW.cs">
+    </Compile>
+    <Compile Include="MTKTestTXPER.cs">
+    </Compile>
+    <Compile Include="CyBLEMTKMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyBLEMTKMainForm.Designer.cs">
+      <DependentUpon>CyBLEMTKMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestRXPER.cs">
+    </Compile>
+    <Compile Include="MTKTestXOCalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTKTestXOCalDialog.Designer.cs">
+      <DependentUpon>MTKTestXOCalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTKTestXOCalibration.cs" />
+    <Compile Include="MultiMeter.cs" />
+    <Compile Include="PreferencesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreferencesDialog.Designer.cs">
+      <DependentUpon>PreferencesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialPortSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialPortSettingsDialog.designer.cs">
+      <DependentUpon>SerialPortSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SFCS_DB_Helper.cs" />
+    <Compile Include="Switch_Config_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switch_Config_Dialog.Designer.cs">
+      <DependentUpon>Switch_Config_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestProgramDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestProgramDialog.Designer.cs">
+      <DependentUpon>TestProgramDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestProgramManager.cs" />
+    <EmbeddedResource Include="AboutMTKDialog.resx">
+      <DependentUpon>AboutMTKDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthDialog.resx">
+      <DependentUpon>AuthDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordDialog.resx">
+      <DependentUpon>ChangePasswordDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchAddMTKTests.resx">
+      <DependentUpon>BatchAddMTKTests.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyBLEMTKSettingsImpExp.resx">
+      <DependentUpon>CyBLEMTKSettingsImpExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyBLEMTKSplashScreen.resx">
+      <DependentUpon>CyBLEMTKSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalysisForm.resx">
+      <DependentUpon>DataAnalysisForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DmmSwitchSettingsDialog.resx">
+      <DependentUpon>DmmSwitchSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DUTCurrentMeasureDialog.resx">
+      <DependentUpon>DUTCurrentMeasureDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturingModeSettings.resx">
+      <DependentUpon>ManufacturingModeSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestProgramAllDialog.resx">
+      <DependentUpon>MTKTestProgramAllDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKPSoCProgrammerDialog.resx">
+      <DependentUpon>MTKPSoCProgrammerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestAnritsuDialog.resx">
+      <DependentUpon>MTKTestAnritsuDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestBDADialog.resx">
+      <DependentUpon>MTKTestBDADialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestCUSDialog.resx">
+      <DependentUpon>MTKTestCUSDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestDelayDialog.resx">
+      <DependentUpon>MTKTestDelayDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestI2CDialog.resx">
+      <DependentUpon>MTKTestI2CDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestPERDialog.resx">
+      <DependentUpon>MTKTestPERDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestRxTxDialog.resx">
+      <DependentUpon>MTKTestRxTxDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestSTCDialog.resx">
+      <DependentUpon>MTKTestSTCDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestTXCWDialog.resx">
+      <DependentUpon>MTKTestTXCWDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyBLEMTKMainForm.resx">
+      <DependentUpon>CyBLEMTKMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTKTestXOCalDialog.resx">
+      <DependentUpon>MTKTestXOCalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreferencesDialog.resx">
+      <DependentUpon>PreferencesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SerialPortSettingsDialog.resx">
+      <DependentUpon>SerialPortSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Switch_Config_Dialog.resx">
+      <DependentUpon>Switch_Config_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestProgramDialog.resx">
+      <DependentUpon>TestProgramDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="CyBLE MTK Application_TemporaryKey.pfx" />
+    <None Include="CyBLEMTKRobotServer.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SFCS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BLE_Landing_Page_Banner%28680x150%29.jpg" />
+    <None Include="CyBLEMTKApplicationClassDiagram.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Stop_red_Icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SplashScreenBanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="refresh-time-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Go1.png" />
+    <Content Include="Readme.txt" />
+    <None Include="Resources\refresh_green.bmp" />
+    <None Include="Resources\Refresh_32px_523850_easyicon.net.png" />
+    <Content Include="tree.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

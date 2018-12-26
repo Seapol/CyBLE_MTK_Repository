@@ -1,0 +1,557 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CyBLE_MTK_Application.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="RecentPath1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empty</Value>
+    </Setting>
+    <Setting Name="RecentPath2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empty</Value>
+    </Setting>
+    <Setting Name="RecentPath3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empty</Value>
+    </Setting>
+    <Setting Name="RecentPath4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empty</Value>
+    </Setting>
+    <Setting Name="RecentPath5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empty</Value>
+    </Setting>
+    <Setting Name="NumDUTs" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="LogLevel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Relevant</Value>
+    </Setting>
+    <Setting Name="ApplicationLogPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Cypress\\PSoCPRoc\\App Log\\</Value>
+    </Setting>
+    <Setting Name="AutoSaveAppLogs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TestLogPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\BLE_TestLogs\\</Value>
+    </Setting>
+    <Setting Name="AutoLogTests" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoLogTestsSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DUT</Value>
+    </Setting>
+    <Setting Name="EnableTestProgDialogMsg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ConnectionType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UART</Value>
+    </Setting>
+    <Setting Name="PauseTestsOnFailure" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CloseSerialDialog" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BDAUseProgrammer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BDAIncrement" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BDA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">000000000000</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM6</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM7</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM8</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM9</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM10</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM11</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM12</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM13</Value>
+    </Setting>
+    <Setting Name="DUTSerialPort8" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort9" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort10" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort11" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort12" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort13" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort14" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTSerialPort15" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IgnoreDUTs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MTKHostSerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM3</Value>
+    </Setting>
+    <Setting Name="AnritsuSerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DUTMultiplexerSerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM4</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerName" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+  &lt;string&gt;Configure...&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerVoltage" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+  &lt;string&gt;5.0V&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerPM" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string&gt;Reset&lt;/string&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerConn" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+  &lt;string&gt;0&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerClock" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string&gt;1.6 MHz&lt;/string&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerPA" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string&gt;Program&lt;/string&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerVerify" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string&gt;false&lt;/string&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DUTProgrammerHexPath" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+  &lt;string /&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AnritsuScriptID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="AnritsuOutputPower" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AnritsuTXPower" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+  &lt;string&gt;0.0&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AnritsuNumPKTS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="BDAProgrammerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Configure...</Value>
+    </Setting>
+    <Setting Name="BDAProgrammerVoltage" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerPM" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerConn" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerClock" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerPA" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerVerify" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerHexPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BDAProgrammerGlobal" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NewLogTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TestModeLongRun" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DUTPredefinedSerialPorts" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Com6&lt;/string&gt;
+  &lt;string&gt;Com7&lt;/string&gt;
+  &lt;string&gt;Com8&lt;/string&gt;
+  &lt;string&gt;Com9&lt;/string&gt;
+  &lt;string&gt;Com10&lt;/string&gt;
+  &lt;string&gt;Com11&lt;/string&gt;
+  &lt;string&gt;Com12&lt;/string&gt;
+  &lt;string&gt;Com13&lt;/string&gt;
+  &lt;string&gt;Com14&lt;/string&gt;
+  &lt;string&gt;Com15&lt;/string&gt;
+  &lt;string&gt;Com16&lt;/string&gt;
+  &lt;string&gt;Com17&lt;/string&gt;
+  &lt;string&gt;Com18&lt;/string&gt;
+  &lt;string&gt;Com19&lt;/string&gt;
+  &lt;string&gt;Com20&lt;/string&gt;
+  &lt;string&gt;Com21&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="EnableComPortsPredefineCheck" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SFCSInterface" Type="System.String" Scope="User">
+      <Value Profile="(Default)">local</Value>
+    </Setting>
+    <Setting Name="Site" Type="System.String" Scope="User">
+      <Value Profile="(Default)">S001</Value>
+    </Setting>
+    <Setting Name="AdoCon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">XCccYIbhUcfqizsAH7bqrHopZ+IaovwKtbxlTfklxB4iMYecEhGm2VNCfWi7DsUCrdxMtywF8VeqL94ePV0zaI5s6ejT5AIiqqR+twYHh2OAs88TiYPrvbk0np6ohVPX0jKo2oCM0t6/DCMb1wOPWw==</Value>
+    </Setting>
+    <Setting Name="DUTCurrentDeepSleepLimitMilliAmp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DUTCurrentLowerLimitMilliAmp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="DUTCurrentUpperLimitMilliAmp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="DMM_Alias" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dmm</Value>
+    </Setting>
+    <Setting Name="Switch_Alias" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sw</Value>
+    </Setting>
+    <Setting Name="DelayInMSBeforeDUTCurrentMeasure" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SamplesCountForDUTCurrentMeasure" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="IsSetupMTKInstrumentsInTheMTKBegin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DUTCurrentMeasureOverallPassCondition" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ALL_SAMPLES</Value>
+    </Setting>
+    <Setting Name="IntervalBetweenDUTCurrentMeasure" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="DUTCurrentMeasureUnit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mA</Value>
+    </Setting>
+    <Setting Name="DelayPerCommandCUS_Additional" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CUSTestRRSRetryInTheBeginning" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DelayPerCommandSTC_Additional" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="STCTestRRSRetryInTheBeginning" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="RelayDelayInMS" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="AppAutoModeLoopWaitTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="RobotServerPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="DelayInMSAfterDUTCurrentMeasure" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DUTCurrentMeasureCriteriaPerSample" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AVERAGE</Value>
+    </Setting>
+    <Setting Name="DMM_ConfigCmd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CONF:CURR 1A,100uA</Value>
+    </Setting>
+    <Setting Name="RobotAckMsgTimeoutSeconds" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="RobotServerDbg" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ReopenDutSerialPortIfMissing" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GeneralLinkSqlLocalDebug" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DUTSerialNumberDuplicationCheck" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ReopenMTKHostSerialPortIfMissing" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DUTModelLengthOverride" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ShopfloorDataBaseEnable" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShopfloorDataBaseLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\hlksrv\Share\Temp\cysp\temp\\SWJshopfloorDB.mdb</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

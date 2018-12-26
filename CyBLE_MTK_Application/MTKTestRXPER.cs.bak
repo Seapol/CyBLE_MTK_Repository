@@ -1,0 +1,498 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Drawing;
+using System.Windows.Forms;
+using System.IO;
+using System.IO.Ports;
+using System.Threading;
+
+namespace CyBLE_MTK_Application
+{
+    class MTKTestRXPER : MTKTest
+    {
+        public int ChannelNumber;
+        public int NumberOfPackets;
+        public int PowerLevel;
+        public string PacketType;
+        public int PacketLength;
+        public double PERPassCriterion;
+
+        public MTKTestRXPER()
+            : base()
+        {
+            Init();
+        }
+
+        public MTKTestRXPER(LogManager Logger)
+            : base(Logger)
+        {
+            Init();
+        }
+
+        public MTKTestRXPER(LogManager Logger, SerialPort MTKPort, SerialPort DUTPort)
+            : base(Logger, MTKPort, DUTPort)
+        {
+            Init();
+        }
+
+        void Init()
+        {
+            InitializeComponent();
+            ChannelNumber = 0;
+            PowerLevel = 0;
+            PacketType = "PRBS9";
+            NumberOfPackets = 1500;
+            PERPassCriterion = 30.8;
+            PacketLength = 37;
+            TestName = "MTKTestRXPER";
+            TestParameterCount = 6;
+        }
+
+        public override string GetDisplayText()
+        {
+            return "RX PER Test:" + " Channel = " + ChannelNumber.ToString() + 
+                "; Power = " + PowerLevel.ToString() + " dBm" + 
+                "; Number of Packets = " + NumberOfPackets.ToString() +
+                "; Packet Type = " + PacketType +
+                "; Packet Size = " + PacketLength.ToString() +
+                "; PER Pass Criterion = " + PERPassCriterion.ToString();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(175, 180);
+            this.CloseButton.TabIndex = 5;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // OKButton
+            // 
+            this.OKButton.Location = new System.Drawing.Point(94, 180);
+            this.OKButton.TabIndex = 4;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            // 
+            // MTKTestRXPER
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(344, 215);
+            this.Name = "MTKTestRXPER";
+            this.Text = "RX PER Test Configuration";
+            this.ResumeLayout(false);
+
+        }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public override string GetTestParameter(int TestParameterIndex)
+        {
+            switch (TestParameterIndex)
+            {
+                case 0:
+                    return ChannelNumber.ToString();
+                case 1:
+                    return PowerLevel.ToString() + " dBm";
+                case 2:
+                    return NumberOfPackets.ToString();
+                case 3:
+                    return PacketType;
+                case 4:
+                    return PacketLength.ToString();
+                case 5:
+                    return PERPassCriterion.ToString();
+            }
+            return base.GetTestParameter(TestParameterIndex);
+        }
+
+        public override string GetTestParameterName(int TestParameterIndex)
+        {
+            switch (TestParameterIndex)
+            {
+                case 0:
+                    return "ChannelNumber";
+                case 1:
+                    return "PowerLevel";
+                case 2:
+                    return "NumberOfPackets";
+                case 3:
+                    return "PacketType";
+                case 4:
+                    return "PacketLength";
+                case 5:
+                    return "PERPassCriterion";
+            }
+            return base.GetTestParameterName(TestParameterIndex);
+        }
+
+        public override bool SetTestParameter(int TestParameterIndex, string ParameterValue)
+        {
+            if (ParameterValue == "")
+            {
+                return false;
+            }
+            switch (TestParameterIndex)
+            {
+                case 0:
+                    if (VerifyChannelNumber(int.Parse(ParameterValue)))
+                    {
+                        ChannelNumber = int.Parse(ParameterValue);
+                        return true;
+                    }
+                    return false;
+                case 1:
+                    if (VerifyPowerLevel(int.Parse(GetPowerLevel(ParameterValue))))
+                    {
+                        PowerLevel = int.Parse(GetPowerLevel(ParameterValue));
+                        return true;
+                    }
+                    return false;
+                case 2:
+                    if (VerifyNumberOfPackets(int.Parse(ParameterValue)))
+                    {
+                        NumberOfPackets = int.Parse(ParameterValue);
+                        return true;
+                    }
+                    return false;
+                case 3:
+                    if (VerifyPacketType(ParameterValue))
+                    {
+                        PacketType = ParameterValue;
+                        return true;
+                    }
+                    return false;
+                case 4:
+                    if (VerifyPacketLength(int.Parse(ParameterValue)))
+                    {
+                        PacketLength = int.Parse(ParameterValue);
+                        return true;
+                    }
+                    return false;
+                case 5:
+                    if (VerifyPERPassCriterion(double.Parse(ParameterValue)))
+                    {
+                        PERPassCriterion = double.Parse(ParameterValue);
+                        return true;
+                    }
+                    return false;
+            }
+            return false;
+        }
+
+        private MTKTestError RunTestBLE()
+        {
+            int PercentageComplete = 0;
+            int TimerVal = ((int)((int)this.NumberOfPackets * 700) / 1000);
+            int TotalEstTime = TimerVal + (20 * 11);
+            int PercentCMD = (int)((5.0 / (double)TotalEstTime) * 100.0);
+            int PercentWait = (int)(((double)TimerVal / (double)TotalEstTime) * 100.0);
+            int TimeIncSteps = (int)Math.Ceiling((double)TimerVal / 40);
+            int PercentIncSteps = PercentWait / TimeIncSteps;
+
+            MTKTestError CommandRetVal;
+
+            this.Log.PrintLog(this, GetDisplayText(), LogDetailLevel.LogRelevant);
+            this.Log.PrintLog(this, "Pass criteria: " + PERPassCriterion + "%",
+                LogDetailLevel.LogRelevant);
+
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #1
+            string Command = "SPL " + PacketLength.ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #2
+            Command = "SPT " + GetPacketType(PacketType).ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #3
+            Command = "DUT 1";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #4
+            Command = "RXP " + this.ChannelNumber.ToString() + " " + this.NumberOfPackets.ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #5
+            Command = "DUT 0";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #6
+            Command = "TXP " + this.ChannelNumber.ToString() + " " + PowerLevel.ToString() +
+                " " + NumberOfPackets.ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            for (int i = 0; i <= TimeIncSteps; i++)
+            {
+                PercentageComplete += PercentIncSteps;
+                this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+                Thread.Sleep(40);
+            }
+
+            //  Command #7
+            Command = "PCS";
+            for (int i = 0; i < 20; i++)
+            {
+                CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+                if (CommandRetVal != MTKTestError.NoError)
+                {
+                    return CommandRetVal;
+                }
+                Thread.Sleep(500);
+                if (this.CommandResult == "CONNECTED")
+                {
+                    break;
+                }
+            }
+            if (this.CommandResult == "DISCONNECTED")
+            {
+                this.Log.PrintLog(this, Command + ": unable to find DUT.", LogDetailLevel.LogRelevant);
+                PostErrorStatus();
+                return MTKTestError.MissingDUT;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #8
+            Command = "PST";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            this.Log.PrintLog(this, "Number of packets tranmitted: " + this.CommandResult, LogDetailLevel.LogEverything);
+            int TxPacket = Int32.Parse(CommandResult);
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #9
+            Command = "DUT 1";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #10
+            Command = "PST";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 200);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            if (CommandResult == "")
+            {
+                this.Log.PrintLog(this, Command + ": unable to find DUT.", LogDetailLevel.LogRelevant);
+                PostErrorStatus();
+                return MTKTestError.MissingDUT;
+            }
+            this.Log.PrintLog(this, "Number of packets received: " + this.CommandResult, LogDetailLevel.LogEverything);
+            int RxPacket = Int32.Parse(CommandResult);
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #11
+            Command = "DUT 0";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+
+            double PERPercent = ((double)(TxPacket - RxPacket) / (double)TxPacket) * 100.00;
+            if (Double.IsInfinity(PERPercent))
+            {
+                PERPercent = 100.0;
+            }
+            this.Log.PrintLog(this, "PER: " + PERPercent.ToString() + "%", LogDetailLevel.LogEverything);
+
+            if (PERPercent < PERPassCriterion)
+            {
+                this.TestStatusCell.Style = new DataGridViewCellStyle { ForeColor = Color.Green };
+                this.TestStatusCell.Value = "PASS";
+                this.Log.PrintLog(this, "Result: PASS", LogDetailLevel.LogRelevant);
+            }
+            else
+            {
+                this.TestStatusCell.Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+                this.TestStatusCell.Value = "FAIL";
+                this.Log.PrintLog(this, "Result: FAIL", LogDetailLevel.LogRelevant);
+                return MTKTestError.TestFailed;
+            }
+            return MTKTestError.NoError;
+        }
+
+        private MTKTestError RunTestUART()
+        {
+            int PercentageComplete = 0;
+            int TimerVal = ((int)((int)this.NumberOfPackets * 700) / 1000);
+            int TotalEstTime = TimerVal + (20 * 6);
+            int PercentCMD = (int)((5.0 / (double)TotalEstTime) * 100.0);
+            int PercentWait = (int)(((double)TimerVal / (double)TotalEstTime) * 100.0);
+            int TimeIncSteps = (int)Math.Ceiling((double)TimerVal / 40);
+            int PercentIncSteps = PercentWait / TimeIncSteps;
+
+            MTKTestError CommandRetVal;
+
+            this.Log.PrintLog(this, GetDisplayText(), LogDetailLevel.LogRelevant);
+            this.Log.PrintLog(this, "Pass criteria: " + PERPassCriterion.ToString() + "%",
+                LogDetailLevel.LogRelevant);
+
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #1
+            string Command = "SPL " + PacketLength.ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #2
+            Command = "SPT " + GetPacketType(PacketType).ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #3
+            Command = "RXP " + ChannelNumber.ToString() + " " + NumberOfPackets.ToString();
+            CommandRetVal = SendCommand(DUTSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #4
+            Command = "TXP " + ChannelNumber.ToString() + " " + PowerLevel.ToString() +
+                " " + NumberOfPackets.ToString();
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            for (int i = 0; i <= TimeIncSteps; i++)
+            {
+                PercentageComplete += PercentIncSteps;
+                this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+                Thread.Sleep(40);
+            }
+
+            //  Command #5
+            Command = "RRS";
+            CommandRetVal = SendCommand(MTKSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            this.Log.PrintLog(this, "Number of packets tranmitted: " + this.CommandResult, LogDetailLevel.LogEverything);
+            int TxPacket = Int32.Parse(CommandResult);
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            //  Command #6
+            Command = "RRS";
+            CommandRetVal = SendCommand(DUTSerialPort, Command, 20);
+            if (CommandRetVal != MTKTestError.NoError)
+            {
+                return CommandRetVal;
+            }
+            this.Log.PrintLog(this, "Number of packets received: " + this.CommandResult, LogDetailLevel.LogEverything);
+            int RxPacket = Int32.Parse(CommandResult);
+            PercentageComplete += PercentCMD;
+            this.TestStatusCell.Value = PercentageComplete.ToString() + "%";
+
+            double PERPercent = ((double)(TxPacket - RxPacket) / (double)TxPacket) * 100.00;
+            this.Log.PrintLog(this, "PER: " + PERPercent.ToString() + "%", LogDetailLevel.LogEverything);
+
+            if (PERPercent < PERPassCriterion)
+            {
+                this.TestStatusCell.Style = new DataGridViewCellStyle { ForeColor = Color.Green };
+                this.TestStatusCell.Value = "PASS";
+                this.Log.PrintLog(this, "Result: PASS", LogDetailLevel.LogRelevant);
+            }
+            else
+            {
+                this.TestStatusCell.Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+                this.TestStatusCell.Value = "FAIL";
+                this.Log.PrintLog(this, "Result: FAIL", LogDetailLevel.LogRelevant);
+                return MTKTestError.TestFailed;
+            }
+            return MTKTestError.NoError;
+        }
+
+        public override MTKTestError RunTest()
+        {
+            if (this.DUTConnectionMode == DUTConnMode.BLE)
+            {
+                return RunTestBLE();
+            }
+            else if (this.DUTConnectionMode == DUTConnMode.UART)
+            {
+                return RunTestUART();
+            }
+
+            return MTKTestError.NoConnectionModeSet;
+        }
+    }
+}

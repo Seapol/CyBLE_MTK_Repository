@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CyBLE_MTK_Application.MTKPSoCProgrammer">
+    <Position X="11.75" Y="1.5" Width="4" />
+    <NestedTypes>
+      <Enum Name="CyBLE_MTK_Application.MTKPSoCProgrammer.BLE_FAMILY" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MTKPSoCProgrammer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="CyBLE_MTK_Application.MTKPSoCProgrammer.NumTestStatusUpdateEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MTKPSoCProgrammer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="CyBLE_MTK_Application.MTKPSoCProgrammer.SetBoolCallback" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MTKPSoCProgrammer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AUYQrIABkNTBCgE9QgMdk0IsCGYWDTCDSuuCEvBAwWA=</HashCode>
+      <FileName>MTKPSoCProgrammer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CyBLE_MTK_Application.MTKTest">
+    <Position X="6.75" Y="3" Width="4.75" />
+    <NestedTypes>
+      <Delegate Name="CyBLE_MTK_Application.MTKTest.TestStatusUpdateEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MTKTest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="CyBLE_MTK_Application.MTKTest.TestResultEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MTKTest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQBAhJQAoBCABIAEECAJI4kAIAyCAIgACAGACYAAACE=</HashCode>
+      <FileName>MTKTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CyBLE_MTK_Application.UnitI2CTest" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAIAAQAAAAIQ=</HashCode>
+      <FileName>MTKPSoCProgrammer.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="CyBLE_MTK_Application.PSoCProgrammerAction">
+    <Position X="3.25" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MTKPSoCProgrammer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.MTKI2CTestType" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>MTKPSoCProgrammer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.MTKTestError" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAgAACAAAABAAoAoAABAgAAAAAQAAAAIAAAAAA=</HashCode>
+      <FileName>MTKTest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.DUTConnMode" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MTKTest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.MTKTestMessageType" Collapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAMAAAAAAAAEIAAAAAAAAAAgAAAACAAAAAAAEAAAA=</HashCode>
+      <FileName>MTKTest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.MTKTestType" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAJAAAQAAAAAAAQIDQQAIABAAAAAEAAIBAEAA=</HashCode>
+      <FileName>MTKTest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CyBLE_MTK_Application.CyBLEMTKSerialPort">
+    <Position X="6.25" Y="1.75" Width="4.5" />
+    <NestedTypes>
+      <Delegate Name="CyBLE_MTK_Application.CyBLEMTKSerialPort.ConnectionEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CyBLEMTKSerialPort.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAgQABAAGUCEoAQkABQgAAIwIAgAIggEOQAAoARAAQA=</HashCode>
+      <FileName>CyBLEMTKSerialPort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CyBLE_MTK_Application.PortType" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAgAAKAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CyBLEMTKSerialPort.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.OpenPortStatus" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAIAAAAAAIAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CyBLEMTKSerialPort.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.ClosePortStatus" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAA=</HashCode>
+      <FileName>CyBLEMTKSerialPort.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CyBLE_MTK_Application.ExtPortType" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAABABAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CyBLEMTKSerialPort.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
