@@ -1,5 +1,5 @@
 Release notes:
-2018-12-24 (v4.0.8)
+2018-12-26 (v4.1.0)
 1.Add new feature of SWJ shopfloor Access Database to backup the test information and test log onto server with mdb file.
 
 
