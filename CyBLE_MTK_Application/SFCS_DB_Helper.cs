@@ -49,6 +49,30 @@ namespace CyBLE_MTK_Application
             set { sqlString = value; }
         }
 
+        private string mDBfileLocation;
+
+        public string MDBfileLocation
+        {
+            get { return mDBfileLocation; }
+            set { mDBfileLocation = value; }
+        }
+
+        private string mDBfile;
+
+        public string MDBfile
+        {
+            get { return mDBfile; }
+            set { mDBfile = value; }
+        }
+
+        private string mDBfileFullPathWithFileName;
+
+        public string MDBfileFullPathWithFileName
+        {
+            get { return mDBfileFullPathWithFileName; }
+            set { mDBfileFullPathWithFileName = value; }
+        }
+
 
         public SFCS_DB_Helper(LogManager log)
         {
@@ -65,21 +89,39 @@ namespace CyBLE_MTK_Application
         }
 
 
-        private void init()
+        private bool init()
         {
             if (connectionString == null)
             {
 
+                mDBfileLocation = CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseLocation;
+                mDBfile = CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseFile;
+                mDBfileFullPathWithFileName = mDBfileLocation + "\\" + mDBfile;
 
-
-                if (!System.IO.File.Exists(Application.StartupPath + @"\SWJshopfloorDB.mdb"))
+                if (System.IO.File.Exists(mDBfileFullPathWithFileName))
                 {
-                    MessageBox.Show("SWJshopfloorDB.mdb is missing...", this.ToString());
-                } 
+                    logger.PrintLog(this, "mDBfileLocation is found at " + mDBfileFullPathWithFileName, LogDetailLevel.LogRelevant);
+                }
+                else if (System.IO.File.Exists(Application.StartupPath + @"\SWJshopfloorDB.mdb"))
+                {
+                    mDBfileFullPathWithFileName = Application.StartupPath + @"\SWJshopfloorDB.mdb";
+                    logger.PrintLog(this, "mDBfileLocation is found at " + mDBfileFullPathWithFileName, LogDetailLevel.LogRelevant);
+                }
+                else
+                {
 
-                connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\SWJshopfloorDB.mdb";
-                
-                //logger.PrintLog(this,"Connecting to ... " + connectionString, LogDetailLevel.LogEverything);
+                    MessageBox.Show("SWJshopfloorDB.mdb is missing...", this.ToString());
+
+                    return false;
+                }
+
+                //connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\SWJshopfloorDB.mdb";
+                connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + mDBfileFullPathWithFileName;
+                //connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Z:\temp\SWJshopfloorDB.mdb";
+
+                logger.PrintLog(this,"Connecting to >>> " + connectionString, LogDetailLevel.LogRelevant);
+
+
             }
 
             if (table == null)
@@ -94,16 +136,22 @@ namespace CyBLE_MTK_Application
                 catch (Exception)
                 {
 
-                    throw;
+                    
+                    return false;
                 }
             }
 
-
+            return true;
         }
 
         public bool InsertRow(string RowContentBySeparator)
         {
             bool retVal = false;
+
+            if (!init())
+            {
+                return retVal;
+            }
 
             sqlString = MakingInsertSQLString(RowContentBySeparator);
 

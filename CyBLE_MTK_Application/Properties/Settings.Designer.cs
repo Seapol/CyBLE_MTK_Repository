@@ -1182,7 +1182,7 @@ namespace CyBLE_MTK_Application.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool IsSetupMTKInstrumentsInTheMTKBegin {
             get {
                 return ((bool)(this["IsSetupMTKInstrumentsInTheMTKBegin"]));
@@ -1446,13 +1446,25 @@ namespace CyBLE_MTK_Application.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\hlksrv\\Share\\Temp\\cysp\\temp\\\\SWJshopfloorDB.mdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\hlksrv\\Share\\Temp\\cysp\\temp")]
         public string ShopfloorDataBaseLocation {
             get {
                 return ((string)(this["ShopfloorDataBaseLocation"]));
             }
             set {
                 this["ShopfloorDataBaseLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SWJshopfloorDB.mdb")]
+        public string ShopfloorDataBaseFile {
+            get {
+                return ((string)(this["ShopfloorDataBaseFile"]));
+            }
+            set {
+                this["ShopfloorDataBaseFile"] = value;
             }
         }
     }

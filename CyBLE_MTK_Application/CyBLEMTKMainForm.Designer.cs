@@ -80,11 +80,11 @@ namespace CyBLE_MTK_Application
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.HostStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.DUTStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DataBaseStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ApplicationStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ApplicationStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel_ShopfloorDatabase = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -446,11 +446,11 @@ namespace CyBLE_MTK_Application
             this.toolStripStatusLabel1,
             this.HostStatus,
             this.toolStripStatusLabel2,
-            this.DUTStatus,
+            this.toolStripStatusLabel4,
+            this.DataBaseStatus,
             this.toolStripStatusLabel3,
             this.ApplicationStatusLabel,
-            this.ApplicationStatus,
-            this.toolStripStatusLabel_ShopfloorDatabase});
+            this.ApplicationStatus});
             this.MTKStatStrip.Location = new System.Drawing.Point(0, 610);
             this.MTKStatStrip.Name = "MTKStatStrip";
             this.MTKStatStrip.Size = new System.Drawing.Size(924, 22);
@@ -499,12 +499,19 @@ namespace CyBLE_MTK_Application
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(4, 20);
             // 
-            // DUTStatus
+            // toolStripStatusLabel4
             // 
-            this.DUTStatus.Margin = new System.Windows.Forms.Padding(0, 3, 3, 2);
-            this.DUTStatus.Name = "DUTStatus";
-            this.DUTStatus.Size = new System.Drawing.Size(30, 17);
-            this.DUTStatus.Text = "DUT";
+            this.toolStripStatusLabel4.Margin = new System.Windows.Forms.Padding(0, 3, 3, 2);
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(30, 17);
+            this.toolStripStatusLabel4.Text = "DUT";
+            // 
+            // DataBaseStatus
+            // 
+            this.DataBaseStatus.Margin = new System.Windows.Forms.Padding(0, 3, 3, 2);
+            this.DataBaseStatus.Name = "DataBaseStatus";
+            this.DataBaseStatus.Size = new System.Drawing.Size(110, 17);
+            this.DataBaseStatus.Text = "Shopfloor Database";
             // 
             // toolStripStatusLabel3
             // 
@@ -527,13 +534,6 @@ namespace CyBLE_MTK_Application
             this.ApplicationStatus.Name = "ApplicationStatus";
             this.ApplicationStatus.Size = new System.Drawing.Size(26, 17);
             this.ApplicationStatus.Text = "Idle";
-            // 
-            // toolStripStatusLabel_ShopfloorDatabase
-            // 
-            this.toolStripStatusLabel_ShopfloorDatabase.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.toolStripStatusLabel_ShopfloorDatabase.Name = "toolStripStatusLabel_ShopfloorDatabase";
-            this.toolStripStatusLabel_ShopfloorDatabase.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel_ShopfloorDatabase.Text = "[Shopfloor Database]";
             // 
             // tableLayoutPanel1
             // 
@@ -1157,7 +1157,7 @@ namespace CyBLE_MTK_Application
         private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
         private System.Windows.Forms.StatusStrip MTKStatStrip;
         private System.Windows.Forms.ToolStripStatusLabel HostStatus;
-        private System.Windows.Forms.ToolStripStatusLabel DUTStatus;
+        private System.Windows.Forms.ToolStripStatusLabel DataBaseStatus;
         private System.Windows.Forms.ToolStripStatusLabel ApplicationStatus;
         private System.Windows.Forms.ToolStripStatusLabel ApplicationStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem TestProgramMenuItem;
@@ -1230,7 +1230,7 @@ namespace CyBLE_MTK_Application
         private System.Windows.Forms.ToolStripMenuItem instrumentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dmmSwitchSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manufacturingModeConfigToolStripMenuItem;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ShopfloorDatabase;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
     }
 }
 

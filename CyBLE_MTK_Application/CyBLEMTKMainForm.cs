@@ -193,7 +193,7 @@ namespace CyBLE_MTK_Application
             DUTSerialPortDialog.SerialPortType = PortType.DUT;
             DUTSerialPortDialog.CloseOnConnect = CyBLE_MTK_Application.Properties.Settings.Default.CloseSerialDialog;
             DUTSerialPortDialog.AutoVerifyON = true;
-            DUTStatus.BackColor = Color.Red;
+            DataBaseStatus.BackColor = Color.Red;
             DUTSerialPortDialog.OnDUTConnectionStatusChange += new SerialPortSettingsDialog.ConnectionEventHandler(MTKSerialPortDialog_OnDUTConnectionStatusChange);
             SplashScreen.LoadStatus += 8;
 
@@ -450,7 +450,9 @@ namespace CyBLE_MTK_Application
 
             if (CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseEnable)
             {
-                toolStripStatusLabel_ShopfloorDatabase.ForeColor = Color.DarkGreen;
+
+                DataBaseStatus.ForeColor = Color.Black;
+                DataBaseStatus.BackColor = Color.Green;
             }
 
 
@@ -1608,7 +1610,7 @@ namespace CyBLE_MTK_Application
                     DUTToolStripMenuItem.Enabled = true;
                     MTKSerialPortDialog.CheckDUTPresence = false;
                     DUTSerialPortDialog.CheckDUTPresence = true;
-                    DUTStatus.BackColor = Color.Red;
+                    DataBaseStatus.BackColor = Color.Red;
                     MTKSerialPortDialog.StartCheckingConnectionStatus();
                     DUTSerialPortDialog.StartCheckingConnectionStatus();
                 }
@@ -1617,7 +1619,7 @@ namespace CyBLE_MTK_Application
                     DUTToolStripMenuItem.Enabled = false;
                     MTKSerialPortDialog.CheckDUTPresence = true;
                     DUTSerialPortDialog.CheckDUTPresence = false;
-                    DUTStatus.BackColor = Color.Red;
+                    DataBaseStatus.BackColor = Color.Red;
                     MTKSerialPortDialog.StartCheckingConnectionStatus();
                 }
 
@@ -3453,7 +3455,7 @@ namespace CyBLE_MTK_Application
             {
                 if (IsHandleCreated)
                 {
-                    this.Invoke(new MethodInvoker(() => DUTStatus.BackColor = Color.Green));
+                    this.Invoke(new MethodInvoker(() => DataBaseStatus.BackColor = Color.Green));
                 }
             }
             else if (ConnStatus == "DISCONNECTED")
@@ -3465,7 +3467,7 @@ namespace CyBLE_MTK_Application
                 }
                 if (IsHandleCreated)
                 {
-                    this.Invoke(new MethodInvoker(() => DUTStatus.BackColor = Color.Red));
+                    this.Invoke(new MethodInvoker(() => DataBaseStatus.BackColor = Color.Red));
                 }
             }
         }
@@ -4120,7 +4122,13 @@ namespace CyBLE_MTK_Application
             m_SFCS = new SFCS(Logger);
             m_SFCS = SFCS.GetSFCS(Logger);
 
-            SFCS_DB = new SFCS_DB_Helper(Logger);
+            if (CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseEnable)
+            {
+                SFCS_DB = new SFCS_DB_Helper(Logger);
+
+            }
+
+
 
 
 
@@ -4274,6 +4282,9 @@ namespace CyBLE_MTK_Application
                 #region ShopfloorAccessDatabase
                 if (CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseEnable)
                 {
+                    //SFCS_DB = new SFCS_DB_Helper(Logger);
+
+
                     SFCS_DB.InsertRow(SerialNumber + "$" + Model + "$" + "MTK" + "$" + errorcode + "$" + TesterID + "$" + socket_no + "$" + MFI_ID + "$" + LogWriteLine + "$" + DUTTestResultToShopfloor);
                 }
 
@@ -4327,6 +4338,11 @@ namespace CyBLE_MTK_Application
                 Logger.PrintLog(this, "Info: List string[] errcodes has been cleaned and its count is: " + errcodes.Count.ToString(), LogDetailLevel.LogEverything);
             }
             Logger.PrintLog(this, "UploadTestResult is DONE", LogDetailLevel.LogRelevant);
+
+            if (CyBLE_MTK_Application.Properties.Settings.Default.ShopfloorDataBaseEnable)
+            {
+                Logger.PrintLog(this, $"Update Database {SFCS_DB.MDBfileFullPathWithFileName} is DONE", LogDetailLevel.LogRelevant);
+            }
         }
 
         private void UpdateAllDutTestStatusAndOverallTestResultLabel(ushort[] dUTOverallSFCSErrCode, ushort[] mTKTestProgramAllTmplSFCSErrCodes, int CurrentDut)

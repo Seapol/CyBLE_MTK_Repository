@@ -2,7 +2,6 @@ Release notes:
 2018-12-26 (v4.1.0)
 1.Add new feature of SWJ shopfloor Access Database to backup the test information and test log onto server with mdb file.
 
-
 2018-11-06 (v4.0.7)
 1.Push to GitHub Repository of CyBLE_MTK_Development_Repository-master
 2.Move AppReleaseNotes to Readme.txt
